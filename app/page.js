@@ -1,10 +1,14 @@
-import Image from "next/image";
+"use client";
 import Cars from "./cars/page";
+import { Suspense } from "react";
+
 
 export default function Home() {
   return (
     <main>
-      <Cars />
+      <Suspense>
+        <Cars />
+      </Suspense>
     </main>
   );
 }
